@@ -1,0 +1,28 @@
+﻿@model ClinicManagement_hk3.Models.Account
+@{
+    TempData["Title"] = "Login Page";
+}
+<div>
+    <h2>Login Page</h2>
+    <h3 style="color:red;">@ViewBag.message</h3>
+
+</div>
+<div>
+    @using (Html.BeginForm())
+    {
+        <div>
+            <label>Enter Email</label>
+            <input type="text" name="accNo"/>
+        </div>
+        <br/><br/>
+        <div>
+            <label>Enter Password</label>
+            <input type="password" name="pinCode" />
+        </div>
+        <br/><br/>
+        <div>
+            <input type="submit" value="Sign In" class="btn btn-primary"/>
+         </div>
+    }
+</div>
+
